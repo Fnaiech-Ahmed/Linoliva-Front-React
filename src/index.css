@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 42 35% 96%;
+    --foreground: 82 35% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 82 35% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 82 35% 15%;
+
+    --primary: 82 40% 28%;
+    --primary-foreground: 42 65% 95%;
+
+    --secondary: 42 60% 88%;
+    --secondary-foreground: 82 35% 15%;
+
+    --muted: 42 25% 92%;
+    --muted-foreground: 82 15% 45%;
+
+    --accent: 45 85% 55%;
+    --accent-foreground: 82 35% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 42 65% 95%;
+
+    --border: 42 20% 85%;
+    --input: 42 20% 85%;
+    --ring: 82 40% 28%;
+
+    --radius: 0.75rem;
+
+    --olive-dark: 82 45% 20%;
+    --olive-medium: 82 40% 35%;
+    --gold: 45 85% 55%;
+    --cream: 42 60% 88%;
+    --earth: 30 25% 65%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(82 40% 28%) 0%, hsl(82 45% 20%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(45 85% 55%) 0%, hsl(5 75% 48%) 100%);
+    --shadow-soft: 0 4px 20px -2px hsl(82 40% 28% / 0.15);
+    --shadow-medium: 0 8px 30px -4px hsl(82 40% 28% / 0.25);
+  }
+
+  .dark {
+    --background: 82 35% 12%;
+    --foreground: 42 65% 95%;
+
+    --card: 82 30% 15%;
+    --card-foreground: 42 65% 95%;
+
+    --popover: 82 30% 15%;
+    --popover-foreground: 42 65% 95%;
+
+    --primary: 82 50% 65%;
+    --primary-foreground: 82 35% 12%;
+
+    --secondary: 82 30% 22%;
+    --secondary-foreground: 42 65% 95%;
+
+    --muted: 82 25% 20%;
+    --muted-foreground: 42 25% 70%;
+
+    --accent: 45 85% 55%;
+    --accent-foreground: 82 35% 12%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 42 65% 95%;
+
+    --border: 82 25% 25%;
+    --input: 82 25% 25%;
+    --ring: 82 50% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-gold bg-clip-text text-transparent;
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+}
