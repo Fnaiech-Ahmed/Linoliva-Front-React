@@ -24,7 +24,7 @@ const Navbar = () => {
     const navLinks = [
         { path: "/", label: "Accueil" },
         { path: "/products", label: "Nos Huiles" },
-        { path: "/orders", label: "Commandes" },
+        //{ path: "/orders", label: "Commandes" },
     ];
 
     const handleLogout = () => {
