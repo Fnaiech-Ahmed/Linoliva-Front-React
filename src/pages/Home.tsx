@@ -49,7 +49,7 @@ const Home = () => {
               </Button>
             </Link>
             <Link to="/order">
-              <Button size="lg" variant="outline" className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6 transition-all duration-300 hover:scale-105">
+              <Button size="lg" variant="outline" className="border-2 border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6 transition-all duration-300 hover:scale-105">
                 Commander Maintenant
               </Button>
             </Link>

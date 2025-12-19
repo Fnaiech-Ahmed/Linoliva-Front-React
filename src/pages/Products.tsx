@@ -21,8 +21,17 @@ export default function Products() {
     }, []);
 
     if (loading) {
-        return <div className="text-center py-10 text-lg">Chargement...</div>;
-    }
+    return (
+        <div className="fixed inset-0 flex flex-col items-center justify-center bg-background z-50">
+            <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-accent to-gold animate-spin">
+                <Leaf className="w-10 h-10 text-accent-foreground" />
+            </div>
+            <span className="text-lg text-primary font-medium mt-4">Chargement des produits...</span>
+        </div>
+    );
+}
+
+
 
     const handleOrderClick = (product: any) => {
         // Rediriger vers la page /order avec les infos du produit
