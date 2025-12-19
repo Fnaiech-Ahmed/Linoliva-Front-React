@@ -31,7 +31,7 @@ const router = createBrowserRouter([
         ),
     },
     { path: "/products", element: <Products /> },
-    { path: "/order", element: <Order /> },
+    { path: "/order", element: <ProtectedRoute><Order /></ProtectedRoute> },
     { path: "/orders", element: <OrderHistory /> },
 
     // Auth

@@ -18,12 +18,12 @@ export async function addProduct(product: any) {
 }
 
 export async function updateProduct(id: number, product: any) {
-    const res = await api.put(`/api/Product/update-product/${id}`, product);
+    const res = await api.put(`/Product/update-product/${id}`, product);
     return res.data;
 }
 
 export async function deleteProduct(id: number) {
-    const res = await api.delete(`/api/Product/delete-product/${id}`);
+    const res = await api.delete(`/Product/delete-product/${id}`);
     return res.data;
 }
 

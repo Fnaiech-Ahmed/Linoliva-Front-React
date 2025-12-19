@@ -44,7 +44,7 @@ export async function createCommande(
     const qs = buildTransactionsQuery(transactions);
 
     const res = await api.post(
-        `${API_URL}/api/Commande/Create-Commande?${qs}`,
+        `/Commande/Create-Commande?${qs}`,
         body
     );
 

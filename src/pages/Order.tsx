@@ -208,25 +208,48 @@ const Order = () => {
                                 </div>
 
                                 <div>
-                                    <Label>Quantité *</Label>
-                                    <Select
-                                        value={formData.quantity}
-                                        onValueChange={(v) =>
-                                            setFormData({ ...formData, quantity: v })
-                                        }
-                                    >
-                                        <SelectTrigger>
-                                            <SelectValue />
-                                        </SelectTrigger>
-                                        <SelectContent>
-                                            {[1, 2, 3, 4, 5, 10].map((n) => (
-                                                <SelectItem key={n} value={String(n)}>
-                                                    {n}
-                                                </SelectItem>
-                                            ))}
-                                        </SelectContent>
-                                    </Select>
-                                </div>
+  <Label>Quantité *</Label>
+  <div className="flex items-center gap-3 mt-2">
+    <Button
+      type="button"
+      variant="outline"
+      size="icon"
+      onClick={() =>
+        setFormData({
+          ...formData,
+          quantity: String(Math.max(1, Number(formData.quantity) - 1))
+        })
+      }
+    >
+      –
+    </Button>
+
+    <Input
+      type="number"
+      min="1"
+      value={formData.quantity}
+      onChange={(e) =>
+        setFormData({ ...formData, quantity: e.target.value })
+      }
+      className="w-20 text-center"
+    />
+
+    <Button
+      type="button"
+      variant="outline"
+      size="icon"
+      onClick={() =>
+        setFormData({
+          ...formData,
+          quantity: String(Number(formData.quantity) + 1)
+        })
+      }
+    >
+      +
+    </Button>
+  </div>
+</div>
+
 
                                 <Textarea
                                     placeholder="Notes (optionnel)"
