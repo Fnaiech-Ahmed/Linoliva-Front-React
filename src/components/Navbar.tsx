@@ -41,7 +41,7 @@ const Navbar = () => {
                             <Leaf className="w-6 h-6 text-primary-foreground" />
                         </div>*/}
                         <img
-                            src="/src/assets/logo.png"
+                            src="/logo.png"
                             alt="Linoliva Logo"
                             className="h-11 w-auto object-contain drop-shadow-sm hover:drop-shadow-md transition-all duration-300"
                         />
