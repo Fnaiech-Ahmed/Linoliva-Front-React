@@ -66,7 +66,7 @@ const Order = () => {
         try {
             /* -------- BODY COMMANDE -------- */
             const commandeBody = {
-                nomVendeur: "TSE Express",
+                nomVendeur: "Linoliva",
                 adresseVendeur: "Tunis",
                 mfVendeur: "1254MD",
 
