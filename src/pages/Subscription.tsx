@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, Sparkles, Crown, Building2 } from "lucide-react";
+import { Check, Sparkles, Crown, Building2 , Home } from "lucide-react";
 import { toast } from "sonner";
+import { Link } from "react-router-dom";
 
 const Subscription = () => {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ const Subscription = () => {
       id: "monthly",
       name: "Mensuel",
       icon: Sparkles,
-      price: "53 TND",
+      price: "73 TND",
       period: "/ mois",
       features: [
         "Accès à toutes les fonctionnalités",
@@ -38,7 +39,7 @@ const Subscription = () => {
       id: "annual",
       name: "Annuel",
       icon: Crown,
-      price: "530 TND",
+      price: "730 TND",
       period: "/ an",
       features: [
         "Accès à toutes les fonctionnalités",
@@ -73,6 +74,13 @@ const Subscription = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-olive-light via-sand to-olive-light/30 py-12 px-4">
       <div className="max-w-6xl mx-auto">
+        <Link 
+                                to="/admin/dashboard" 
+                                className="inline-flex items-center justify-center gap-1 text-olive-dark/70 hover:text-olive transition-colors"
+                            >
+                                <Home size={16} />
+                                Retour au Dashboard
+                            </Link>
         <div className="text-center mb-12">
           <h1 className="text-4xl font-display text-olive mb-4">
             Choisissez votre formule

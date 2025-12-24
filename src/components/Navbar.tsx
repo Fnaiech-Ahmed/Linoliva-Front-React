@@ -24,7 +24,7 @@ const Navbar = () => {
     const navLinks = [
         { path: "/", label: "Accueil" },
         { path: "/products", label: "Nos Huiles" },
-        //{ path: "/orders", label: "Commandes" },
+        ...(user ? [{ path: "/admin/dashboard", label: "Dashboard" }] : []),
     ];
 
     const handleLogout = () => {
@@ -141,7 +141,7 @@ const Navbar = () => {
                                         ) : (
                                             <Link to="/admin/login">
                                                 <Button className="w-full bg-gradient-to-r from-pink-500 to-red-500 hover:from-red-500 hover:to-pink-500 text-white font-semibold shadow-medium rounded-xl">
-                                                    Admin Login
+                                                Login
                                                 </Button>
                                             </Link>
                                         )}

@@ -1,6 +1,6 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import {LayoutDashboard, Package, ShoppingCart, LogOut, Crown} from "lucide-react";
+import {LayoutDashboard, Package, ShoppingCart, LogOut, Crown, Home} from "lucide-react";
 import { toast } from "sonner";
 
 interface AdminLayoutProps {
@@ -21,6 +21,7 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
     { path: "/admin/dashboard", icon: LayoutDashboard, label: "Tableau de bord" },
     { path: "/admin/orders", icon: ShoppingCart, label: "Commandes" },
     { path: "/admin/products", icon: Package, label: "Produits" },
+    { path: "/", icon: Home, label: "Acceuil" },
   ];
 
   return (

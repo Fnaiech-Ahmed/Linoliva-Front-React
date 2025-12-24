@@ -72,7 +72,7 @@ const Order = () => {
 
                 nomAcheteur: formData.name,
                 adresseAcheteur: formData.phone,
-                mfAcheteur: ""
+                mfAcheteur: "1254MD"
             };
 
             /* -------- TRANSACTIONS -------- */

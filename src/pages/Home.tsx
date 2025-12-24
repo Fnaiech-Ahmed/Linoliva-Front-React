@@ -48,11 +48,11 @@ const Home = () => {
                 Découvrir Nos Huiles
               </Button>
             </Link>
-            <Link to="/order">
+            {/*<Link to="/order">
               <Button size="lg" variant="outline" className="border-2 border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6 transition-all duration-300 hover:scale-105">
                 Commander Maintenant
               </Button>
-            </Link>
+            </Link>*/}
           </div>
         </div>
       </section>

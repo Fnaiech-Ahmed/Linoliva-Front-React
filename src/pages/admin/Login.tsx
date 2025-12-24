@@ -9,12 +9,14 @@ import { toast } from "sonner";
 import { loginRequest } from "@/api/auth.api";
 import { decodeToken } from "@/utils/jwt.util";
 import { AuthContext } from "@/contexts/AuthContext";
+import { Eye, EyeOff, Home } from "lucide-react";
+
 const Login = () => {
     const navigate = useNavigate();
     const { login } = useContext(AuthContext);
     const [credentials, setCredentials] = useState({ email: "", password: "" });
     const [loading, setLoading] = useState(false);
-
+    const [showPassword, setShowPassword] = useState(false);
     const handleLogin = async (e) => {
         e.preventDefault();
 
@@ -101,21 +103,41 @@ const Login = () => {
 
                         <div className="space-y-2">
                             <Label htmlFor="password">Mot de passe</Label>
-                            <Input
-                                id="password"
-                                type="password"
-                                value={credentials.password}
-                                onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
-                            />
+                            <div className="relative">
+                                <Input
+                                    id="password"
+                                    type={showPassword ? "text" : "password"}
+                                    value={credentials.password}
+                                    onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
+                                    className="pr-10"
+                                />
+                                <button
+                                    type="button"
+                                    onClick={() => setShowPassword(!showPassword)}
+                                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                                >
+                                    {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                                </button>
+                            </div>
                         </div>
 
                         <Button type="submit" disabled={loading} className="w-full">
                             {loading ? "Connexion..." : "Se connecter"}
                         </Button>
-
-                        <Link to="/auth/register" className="block text-center text-sm">
-                            Créer un compte
-                        </Link>
+                        <div className="flex flex-col gap-2 text-center text-sm">
+                           {/* <Link to="/auth/register" className="text-olive hover:text-olive-dark transition-colors">
+                                Créer un compte
+                            </Link>*/}
+                            
+                           
+                            <Link 
+                                to="/" 
+                                className="inline-flex items-center justify-center gap-1 text-olive-dark/70 hover:text-olive transition-colors"
+                            >
+                                <Home size={16} />
+                                Retour à l'accueil
+                            </Link>
+                        </div>
                     </form>
                 </CardContent>
             </Card>
