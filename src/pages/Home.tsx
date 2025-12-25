@@ -225,8 +225,8 @@ const Home = () => {
                 </div>
                 <h3 className="font-semibold text-lg mb-2 text-foreground">Adresse</h3>
                 <p className="text-muted-foreground">
-                  Borj louzir<br />
-                  2700 Ariana, Tunis
+                  El kssour cherarda<br />
+                  Kairouan
                 </p>
               </Card>
             </div>
