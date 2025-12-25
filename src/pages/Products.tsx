@@ -69,7 +69,7 @@ export default function Products() {
                             className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
                         >
                             <img
-                                src={p.adresse_Image_Product}
+                                src={"https://www.huiledoliveitalienne.com/img/cms/blog/14/huile-d-olive.jpg"}
                                 alt={p.name}
                                 className="w-full h-56 object-cover"
                             />
