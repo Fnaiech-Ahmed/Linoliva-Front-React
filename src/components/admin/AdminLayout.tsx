@@ -18,10 +18,10 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
   };
 
   const menuItems = [
+    { path: "/", icon: Home, label: "Accueil" },
     { path: "/admin/dashboard", icon: LayoutDashboard, label: "Tableau de bord" },
     { path: "/admin/orders", icon: ShoppingCart, label: "Commandes" },
     { path: "/admin/products", icon: Package, label: "Produits" },
-    { path: "/", icon: Home, label: "Acceuil" },
   ];
 
   return (

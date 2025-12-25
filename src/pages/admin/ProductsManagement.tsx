@@ -112,7 +112,7 @@ const ProductsManagement = () => {
             price: 0,
             barcode: "",
             description: "",
-            adresse_Image_Product: "",
+            adresse_Image_Product: "https://www.huiledoliveitalienne.com/img/cms/blog/14/huile-d-olive.jpg",
             family: "",
             subFamily: "",
             category: "",
@@ -156,9 +156,9 @@ const ProductsManagement = () => {
                                                 onChange={(v) => setCurrentProduct({ ...currentProduct, barcode: v })}
                                     />
 
-                                    <InputField label="URL Image" value={currentProduct.adresse_Image_Product}
+                                    {/*<InputField label="URL Image" value={currentProduct.adresse_Image_Product}
                                                 onChange={(v) => setCurrentProduct({ ...currentProduct, adresse_Image_Product: v })}
-                                    />
+                                    />*/}
 
                                     <InputField label="Famille" value={currentProduct.family}
                                                 onChange={(v) => setCurrentProduct({ ...currentProduct, family: v })}
