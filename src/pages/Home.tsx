@@ -232,7 +232,7 @@ const Home = () => {
             </div>
 
             <div className="text-center mt-12">
-              <Link to="/order">
+              <Link to="/products">
                 <Button size="lg" className="bg-gradient-to-r from-accent to-gold hover:from-gold hover:to-accent text-accent-foreground font-semibold text-lg px-12 py-6 shadow-medium hover:shadow-soft transition-all duration-300 hover:scale-105">
                   Commander Votre Huile
                 </Button>

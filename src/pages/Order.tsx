@@ -272,7 +272,7 @@ const Order = () => {
 
                             <div className="flex gap-4">
                                 <img
-                                    src={productImage}
+                                    src={"https://www.huiledoliveitalienne.com/img/cms/blog/14/huile-d-olive.jpg"}
                                     className="w-24 h-24 rounded object-cover"
                                 />
                                 <div>
