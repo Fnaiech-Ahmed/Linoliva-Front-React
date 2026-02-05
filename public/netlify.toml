@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "/api/*"
-  to = "http://linoliva-backend-app.runasp.net/api/:splat"
-  status = 200
-  force = true
