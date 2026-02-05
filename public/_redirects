@@ -1,2 +1,2 @@
 /*    /index.html   200
-/api/*  http://linoliva-backend-app.runasp.net/api/:splat  200
+/api/*  http://linoliva-backend-app.runasp.net/:splat  200
